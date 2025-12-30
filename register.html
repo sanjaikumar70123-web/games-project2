@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gaming Register</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: radial-gradient(circle at top, #1a0033, #000);
+    overflow:hidden;
+}
+
+body::before{
+    content:"";
+    position:absolute;
+    width:320px;
+    height:320px;
+    background:#ff00ff;
+    filter:blur(160px);
+    animation: glowMove 7s infinite alternate;
+}
+
+@keyframes glowMove{
+    0%{transform:translate(-200px,-150px);}
+    100%{transform:translate(200px,200px);}
+}
+
+.register-box{
+    position:relative;
+    width:400px;
+    max-width:92%;
+    padding:30px;
+    background:rgba(0,0,0,0.85);
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 0 20px #00ffcc;
+    animation: neonPulse 2s infinite alternate;
+}
+
+@keyframes neonPulse{
+    from{box-shadow:0 0 15px #00ffcc;}
+    to{box-shadow:0 0 35px #00ffcc;}
+}
+
+.register-box h1{
+    color:#00ffcc;
+    margin-bottom:22px;
+    letter-spacing:3px;
+    text-shadow:0 0 10px #00ffcc;
+}
+
+.input-box{
+    margin-bottom:14px;
+    text-align:left;
+}
+
+.input-box label{
+    font-size:13px;
+    color:#aaa;
+}
+
+.input-box input{
+    width:100%;
+    padding:11px;
+    margin-top:5px;
+    border:none;
+    outline:none;
+    border-radius:8px;
+    background:#111;
+    color:#fff;
+    box-shadow: inset 0 0 5px #00ffcc;
+}
+
+.register-btn{
+    width:100%;
+    padding:14px;
+    margin-top:12px;
+    border:none;
+    border-radius:10px;
+    background:#00ffcc;
+    color:#000;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 0 18px #00ffcc;
+}
+
+.register-btn:hover{
+    background:#00cca3;
+    box-shadow:0 0 35px #00ffcc;
+    transform:scale(1.03);
+}
+
+.extra{
+    margin-top:16px;
+    font-size:13px;
+    color:#bbb;
+}
+
+.extra a{
+    color:#00ffcc;
+    text-decoration:none;
+}
+
+.extra a:hover{
+    text-decoration:underline;
+}
+.home>a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media(max-width:480px){
+    .register-box{
+        padding:22px;
+    }
+    .register-box h1{
+        font-size:22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="register-box">
+    <h1>CREATE ACCOUNT</h1>
+
+    <div class="input-box">
+        <label>Gamer Name</label>
+        <input type="text" placeholder="Enter Gamer Name">
+    </div>
+
+    <div class="input-box">
+        <label>Email</label>
+        <input type="email" placeholder="Enter Email">
+    </div>
+
+    <div class="input-box">
+        <label>Password</label>
+        <input type="password" placeholder="Create Password">
+    </div>
+
+    <div class="input-box">
+        <label>Confirm Password</label>
+        <input type="password" placeholder="Confirm Password">
+    </div>
+
+    <button class="register-btn">REGISTER</button>
+
+    <div class="extra">
+        <p>Already a Player? <a href="login.html">Login Here</a></p>
+    </div>
+    <br>
+    <br>
+    <div class="home">
+        <a href="index.html">Home</a>
+
+    </div>
+</div>
+
+</body>
+</html>

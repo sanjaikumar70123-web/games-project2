@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Neon Gaming Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: radial-gradient(circle at top, #1a0033, #000);
+    overflow:hidden;
+}
+
+/* animated neon background */
+body::before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:#00ffcc;
+    filter:blur(150px);
+    animation: glowMove 6s infinite alternate;
+}
+
+@keyframes glowMove{
+    0%{transform:translate(-200px,-100px);}
+    100%{transform:translate(200px,150px);}
+}
+
+.login-box{
+    position:relative;
+    width:360px;
+    max-width:90%;
+    padding:30px;
+    background:rgba(0,0,0,0.8);
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 0 20px #00ffcc;
+    animation: neonPulse 2s infinite alternate;
+}
+
+@keyframes neonPulse{
+    from{box-shadow:0 0 15px #00ffcc;}
+    to{box-shadow:0 0 30px #00ffcc;}
+}
+
+.login-box h1{
+    color:#00ffcc;
+    margin-bottom:25px;
+    letter-spacing:3px;
+    text-shadow:0 0 10px #00ffcc;
+}
+
+.input-box{
+    margin-bottom:18px;
+    text-align:left;
+}
+
+.input-box label{
+    font-size:13px;
+    color:#aaa;
+}
+
+.input-box input{
+    width:100%;
+    padding:12px;
+    margin-top:6px;
+    border:none;
+    outline:none;
+    border-radius:8px;
+    background:#111;
+    color:#fff;
+    font-size:14px;
+    box-shadow: inset 0 0 5px #00ffcc;
+}
+
+.login-btn{
+    width:100%;
+    padding:14px;
+    margin-top:10px;
+    border:none;
+    border-radius:10px;
+    background:#00ffcc;
+    color:#000;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 0 15px #00ffcc;
+}
+
+.login-btn:hover{
+    background:#00cca3;
+    box-shadow:0 0 30px #00ffcc;
+    transform:scale(1.03);
+}
+
+.extra{
+    margin-top:18px;
+    font-size:13px;
+    color:#bbb;
+}
+
+.extra a{
+    color:#00ffcc;
+    text-decoration:none;
+}
+
+.extra a:hover{
+    text-decoration:underline;
+}
+.home>a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media(max-width:480px){
+    .login-box{
+        padding:22px;
+    }
+    .login-box h1{
+        font-size:22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+    <h1>GAME LOGIN</h1>
+
+    <div class="input-box">
+        <label>Gamer ID</label>
+        <input type="text" placeholder="Enter Gamer ID">
+    </div>
+
+    <div class="input-box">
+        <label>Password</label>
+        <input type="password" placeholder="Enter Password">
+    </div>
+
+    <button class="login-btn">LOGIN</button>
+
+    <div class="extra">
+        <p>New Player? <a href="register.html">Create Account</a></p>
+    </div>
+    <br>
+    <br>
+    <div class="home">
+        <a href="index.html"> click back to Home</a>
+
+    </div>
+</div>
+
+</body>
+</html>
