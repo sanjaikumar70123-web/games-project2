@@ -138,21 +138,24 @@ body::before{
 </head>
 
 <body>
+    
 
 <div class="login-box">
     <h1>GAME LOGIN</h1>
 
     <div class="input-box">
         <label>Gamer ID</label>
-        <input type="text" placeholder="Enter Gamer ID">
+        <input type="text" placeholder="Enter Gamer ID" id="username">
+        <span style="color: red; font-size: 12px;" id="username_error"></span>
     </div>
 
     <div class="input-box">
         <label>Password</label>
-        <input type="password" placeholder="Enter Password">
+        <input type="password" placeholder="Enter Password" id="password">
+        <span style="color: red; font-size: 12px;" id="password_error"></span>
     </div>
 
-    <button class="login-btn">LOGIN</button>
+    <button class="login-btn" type="button" onclick="demo()">LOGIN</button>
 
     <div class="extra">
         <p>New Player? <a href="register.html">Create Account</a></p>
@@ -164,6 +167,28 @@ body::before{
 
     </div>
 </div>
+<script>
+    function demo(){
+        console.log('yes login success')
+        let username=document.getElementById('username').value;
+        let password=document.getElementById('password').value;
+
+        if (username=='' && password==''){
+            document.getElementById('username_error').innerHTML='username is required'
+            document.getElementById('password_error').innerHTML='password is required'
+
+        }
+        if (username==''){
+            document.getElementById('username_error').innerHTML='username is required'
+
+        }
+        if (password==''){
+            document.getElementById('password_error').innerHTML='password is required'
+
+        }
+    }
+
+</script>
 
 </body>
 </html>
